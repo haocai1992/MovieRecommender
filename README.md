@@ -1,32 +1,38 @@
+![](imgs/banner.jpg)
+*(Photo by <a href="https://unsplash.com/@tysonmoultrie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tyson Moultrie</a> on <a href="https://unsplash.com/s/photos/movie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</p>*
+
+This repo contains the source code for [this blog](https://haocai1992.github.io/data/science/2022/01/13/build-recommendation-system-using-scala-spark-and-hadoop.html).
+
 # A movie recommendation system built using Scala, Spark and Hadoop
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [1. Introduction to recommendation system](#1-introduction-to-recommendation-system)
+- [A movie recommendation system built using Scala, Spark and Hadoop](#a-movie-recommendation-system-built-using-scala-spark-and-hadoop)
+  - [Table of Contents](#table-of-contents)
+  - [1. Introduction to recommendation system](#1-introduction-to-recommendation-system)
     - [1.1 Different recommendataion system algorithms](#11-different-recommendataion-system-algorithms)
     - [1.2 Collaborative filtering and Spark ALS](#12-collaborative-filtering-and-spark-als)
-- [2. System setup](#2-system-setup)
-- [3. Dataset](#3-dataset)
-- [4. Runnning in Spark](#4-runnning-in-spark)
+  - [2. System setup](#2-system-setup)
+  - [3. Dataset](#3-dataset)
+  - [4. Runnning in Spark](#4-runnning-in-spark)
     - [4.1 Clone code from Github](#41-clone-code-from-github)
     - [4.2 Preparing data in HDFS](#42-preparing-data-in-hdfs)
     - [4.3 Train recommendataion model in Spark](#43-train-recommendataion-model-in-spark)
     - [4.4 Generating recommendations in Spark](#44-generating-recommendations-in-spark)
-- [5. Running PySpark version in Databricks](#5-running-pyspark-version-in-databricks)
-- [6. Recommendation system design](#6-recommendation-system-design)
-- [7. Implementation](#7-implementation)
+  - [5. Running PySpark version in Databricks](#5-running-pyspark-version-in-databricks)
+  - [6. Recommendation system design](#6-recommendation-system-design)
+  - [7. Implementation](#7-implementation)
     - [7.1 Training ALS model - `RecommenderTrain.scala`](#71-training-als-model---recommendertrainscala)
-        - [7.1.1 `prepareData`](#711-preparedata)
-        - [7.1.2 `ALS.train`](#712-alstrain)
-        - [7.1.3 `saveModel`](#713-savemodel)
+      - [7.1.1 `prepareData`](#711-preparedata)
+      - [7.1.2 `ALS.train`](#712-alstrain)
+      - [7.1.3 `saveModel`](#713-savemodel)
     - [7.2 Generating recommendations - `Recommend.scala`](#72-generating-recommendations---recommendscala)
-        - [7.2.1 `prepareData`](#721-preparedata)
-        - [7.2.2 `MatrixFactorizationModel.load`](#722-matrixfactorizationmodelload)
-        - [7.2.3 `model.recommendProducts`](#723-modelrecommendproducts)
-        - [7.2.4 `model.recommendUsers`](#724-modelrecommendusers)
-- [8. Summary](#8-summary)
-- [Contact](#contact)
+      - [7.2.1 `prepareData`](#721-preparedata)
+      - [7.2.2 `MatrixFactorizationModel.load`](#722-matrixfactorizationmodelload)
+      - [7.2.3 `model.recommendProducts`](#723-modelrecommendproducts)
+      - [7.2.4 `model.recommendUsers`](#724-modelrecommendusers)
+  - [8. Summary](#8-summary)
+  - [Contact](#contact)
 
 Recommendation system is a widely used machine learning technique that has many applications in E-commerce (Amazon, Alibaba), video streaming (Netflix, Disney+), social network (Facebook, Linkedin) and many other areas. Because of the large amount of data in those services, nowadays most of industry-level recommendation systems are built in big data frameworks like Spark and Hadoop. So in this blog I want to show you how I built a movie recomendation system using Scala, Spark and Hadoop.
 
