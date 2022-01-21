@@ -1,7 +1,7 @@
 ![](imgs/banner.jpg)
 *(Photo by <a href="https://unsplash.com/@tysonmoultrie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tyson Moultrie</a> on <a href="https://unsplash.com/s/photos/movie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</p>*
 
-This repo contains the source code for [my article](https://towardsdatascience.com/build-recommendation-system-using-scala-spark-and-hadoop-d2ee35c97d3c) published on [Towards Data Science](https://towardsdatascience.com).
+***This repo contains the source code for [my article](https://towardsdatascience.com/build-recommendation-system-using-scala-spark-and-hadoop-d2ee35c97d3c) published on [Towards Data Science](https://towardsdatascience.com).***
 
 # A movie recommendation system built using Scala, Spark and Hadoop
 
